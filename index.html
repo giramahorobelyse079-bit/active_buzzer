@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <h2>SmartHome</h2>
+        <ul>
+            <li class="nav-link active" data-section="dashboard-section">🏠 Dashboard</li>
+            <li class="nav-link" data-section="rooms-section">🛋 Rooms</li>
+            <li class="nav-link" data-section="settings-section">⚙ Settings</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Top Bar -->
+        <header class="topbar">
+            <h1>Smart Home Dashboard</h1>
+            <div class="user-info">
+                <span>🔔</span>
+                <span>pink_bely</span>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="section active">
+            <h2>Energy Usage</h2>
+            <div class="energy-cards">
+                <div class="card energy-card">
+                    <h3>Daily</h3>
+                    <p>12 kWh</p>
+                </div>
+                <div class="card energy-card">
+                    <h3>Monthly</h3>
+                    <p>320 kWh</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms Section -->
+        <section id="rooms-section" class="section">
+            <!-- Living Room -->
+            <h2>Living Room</h2>
+            <div class="grid">
+                <div class="card appliance-card">
+                    <div class="card-header">
+                        <span class="icon">💡</span>
+                        <h3>Light</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="status on" id="light-status">ON</p>
+                        <p>Brightness: 80%</p>
+                    </div>
+                    <div class="card-footer">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle" data-target="light-status" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card appliance-card">
+                    <div class="card-header">
+                        <span class="icon">🌀</span>
+                        <h3>Fan</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="status off" id="fan-status">OFF</p>
+                        <p>Speed: Medium</p>
+                    </div>
+                    <div class="card-footer">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle" data-target="fan-status">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bedroom -->
+            <h2>Bedroom</h2>
+            <div class="grid">
+                <div class="card appliance-card">
+                    <div class="card-header">
+                        <span class="icon">❄</span>
+                        <h3>Air Conditioner</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="status on" id="ac-status">ON</p>
+                        <p>Temperature: 24°C</p>
+                    </div>
+                    <div class="card-footer">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle" data-target="ac-status" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card appliance-card">
+                    <div class="card-header">
+                        <span class="icon">📺</span>
+                        <h3>Television</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="status off" id="tv-status">OFF</p>
+                        <p>Channel: N/A</p>
+                    </div>
+                    <div class="card-footer">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle" data-target="tv-status">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card appliance-card">
+                    <div class="card-header">
+                        <span class="icon">🔌</span>
+                        <h3>Socket</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="status on" id="socket-status">ON</p>
+                        <p>Power Load: 220W</p>
+                    </div>
+                    <div class="card-footer">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle" data-target="socket-status" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kitchen -->
+            <h2>Kitchen</h2>
+            <div class="grid">
+                <div class="card appliance-card">
+                    <div class="card-header">
+                        <span class="icon">🧊</span>
+                        <h3>Refrigerator</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="status on" id="fridge-status">ON</p>
+                        <p>Temperature: 4°C</p>
+                    </div>
+                    <div class="card-footer">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle" data-target="fridge-status" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card appliance-card">
+                    <div class="card-header">
+                        <span class="icon">🔥</span>
+                        <h3>Oven</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="status off" id="oven-status">OFF</p>
+                        <p>Mode: Bake</p>
+                    </div>
+                    <div class="card-footer">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle" data-target="oven-status">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings-section" class="section">
+            <h2>Settings</h2>
+            <div class="settings-card">
+                <p>Profile Settings</p>
+            </div>
+            <div class="settings-card">
+                <p>Notification Preferences</p>
+            </div>
+            <div class="settings-card">
+                <p>Theme Settings</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle ON/OFF status
+        const toggles = document.querySelectorAll('.toggle');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                const targetId = toggle.dataset.target;
+                const statusElem = document.getElementById(targetId);
+
+                if (toggle.checked) {
+                    statusElem.textContent = 'ON';
+                    statusElem.classList.remove('off');
+                    statusElem.classList.add('on');
+                } else {
+                    statusElem.textContent = 'OFF';
+                    statusElem.classList.remove('on');
+                    statusElem.classList.add('off');
+                }
+            });
+        });
+
+        // Navigation logic
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Highlight active link
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Show selected section
+                const targetId = link.dataset.section;
+                sections.forEach(sec => sec.classList.remove('active'));
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html> 
